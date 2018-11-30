@@ -6,17 +6,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>INDEX</title>
+<title>HelloStruts</title>
 </head>
 <body>
-
-	<s:form action="HelloStrutsAction">
-	  <s:submit value="HelloStruts" />
-	</s:form>
-	
-	<s:form action="WelcomeAction">
-	  <s:submit value="Welcome" />
-	</s:form>
+<h1>HelloStruts2!</h1>
+<br>
+<h3><s:property value="result" /></h3>
 
 </body>
 </html>
