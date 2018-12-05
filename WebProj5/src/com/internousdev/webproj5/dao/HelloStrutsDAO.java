@@ -27,7 +27,7 @@ public class HelloStrutsDAO {
 				dto.setUserId(rs.getInt("user_id"));
 				dto.setUserName(rs.getString("user_name"));
 				dto.setPassword(rs.getString("password"));
-				dto.setResult("MySQL‚ÆÚ‘±‚Å‚«‚Ü‚·B");
+				dto.setResult("MySQLã¨æ¥ç¶šã§ãã¾ã™ã€‚");
 				helloStrutsDTOList.add(dto);
 			}
 
