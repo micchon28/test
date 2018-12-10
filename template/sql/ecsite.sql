@@ -19,8 +19,8 @@ create table login_user_transaction(
 drop table if exists item_info_transaction;
 
 create table item_info_transaction(
-	id int not null primary key auto_increment;
-	item_name carchar(30),
+	id int not null primary key auto_increment,
+	item_name varchar(30),
 	item_price int,
 	item_stock int,
 	insert_date datetime,
@@ -35,9 +35,9 @@ create table user_buy_item_transaction(
 	total_price int,
 	total_count int,
 	user_master_id varchar(16),
-	pay carchar(30),
+	pay varchar(30),
 	insert_date datetime,
-	delete_date datetime,
+	delete_date datetime
 );
 
 INSERT INTO item_info_transaction(item_name, item_price, item_stock) VALUES("ÉmÅ[ÉgBook", 100, 50);
