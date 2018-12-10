@@ -68,7 +68,7 @@
 		</div>
 
 		<div>
-			<s:if test="errorMessage !=''">
+			<s:if test="errorMessage != ''">
 				<s:property value="errorMessage" escape="false" />
 			</s:if>
 			<table>
@@ -102,7 +102,7 @@
 			</table>
 
 			<div>
-				<spam>前画面に戻る場合は</spam>
+				<span>前画面に戻る場合は</span>
 				<a href='<s:url action="HomeAction" />'>こちら</a>
 			</div>
 		</div>

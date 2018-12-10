@@ -25,8 +25,16 @@
 		  <result name="success">userCreateConfirm.jsp</result>
 		</action>
 
-		<action name="UserCreateCompleteAction" class="com.internoudev.template.action.UserCreateCompleteAction" method="execute">
+		<action name="UserCreateCompleteAction" class="com.internousdev.template.action.UserCreateCompleteAction" method="execute">
 		  <result name="success">userCreateComplete.jsp</result>
+		</action>
+
+		<action name="BuyItemAction" class="com.internousdev.template.action.BuyItemAction" method="execute">
+		  <result name="success">buyItemConfirm.jsp</result>
+		</action>
+
+		<action name="BuyItemConfirmAction" class="com.internousdev.template.action.BuyItemConfirmAction" method="execute">
+		  <result name="success">buyItemComplete.jsp</result>
 		</action>
 
 	</package>
