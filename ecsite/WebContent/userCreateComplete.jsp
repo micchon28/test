@@ -53,10 +53,7 @@
 			background-color:black;
 			clear:both;
 		}
-		#text-center{
-			display:inline-block;
-			text-align:center;
-		}
+
 	</style>
 </head>
 <body>

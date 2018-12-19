@@ -53,10 +53,7 @@
 			background-color:black;
 			clear:both;
 		}
-		#text-center{
-			display:inline-block;
-			text-align:center;
-		}
+
 	</style>
 </head>
 <body>
@@ -78,7 +75,7 @@
 						<span>商品名</span>
 					</td>
 					<td>
-						<s:property value="session.buyItem_name" />
+						<s:property value="session.buyItem_name" /><br>
 					</td>
 				</tr>
 
@@ -106,7 +103,7 @@
 				</tr>
 				<tr>
 					<td>
-						<span>支払方法</span>
+						<span>支払い方法</span>
 					</td>
 					<td>
 						<input type="radio" name="pay" value="1" checked="checked">現金払い

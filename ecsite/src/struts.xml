@@ -2,7 +2,7 @@
 <!DOCTYPE struts PUBLIC
 "-//Apache Software Foundation//DTO Struts Configuration 2.3//EN"
 "http://struts.apache.org/dtds/struts-2.3.dtd">
-<!-- Strutsの詳細設定 -->
+
 <struts>
 	<constant name="struts.devMode" value="true" />
 	<package name="com.internousdev.ecsite.action" extends="struts-default">
@@ -27,7 +27,13 @@
 		<!-- UserCreateAction -->
 		<action name="UserCreateAction" class="com.internousdev.ecsite.action.UserCreateAction" method="execute">
 			<result name="success">userCreate.jsp</result>
-			<result name="back">login</result>
+			<result name="back">login.jsp</result>
+		</action>
+
+		<!-- UserCreateConfirmAction -->
+		<action name="UserCreateConfirmAction" class="com.internousdev.ecsite.action.UserCreateConfirmAction" method="execute">
+			<result name="success">userCreateConfirm.jsp</result>
+			<result name="error">userCreate.jsp</result>
 		</action>
 
 		<!-- UserCreateCompleteAction -->
@@ -43,7 +49,7 @@
 
 		<!-- BuyItemConfirmAction -->
 		<action name="BuyItemConfirmAction" class="com.internousdev.ecsite.action.BuyItemConfirmAction" method="execute">
-			<result name="success">buyItemConplete.jsp</result>
+			<result name="success">buyItemComplete.jsp</result>
 			<result name="back">buyItem.jsp</result>
 		</action>
 
@@ -55,7 +61,6 @@
 		<!-- MyPageAction -->
 		<action name="MyPageAction" class="com.internousdev.ecsite.action.MyPageAction" method="execute">
 			<result name="success">myPage.jsp</result>
-			<result name="error">error.jsp</result>
 		</action>
 
 		<!-- LogoutAction -->
