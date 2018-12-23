@@ -39,7 +39,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		return loginUserId;
 	}
 
-	public void setLoginUserID(String loginUserId){
+	public void setLoginUserId(String loginUserId){
 		this.loginUserId=loginUserId;
 	}
 

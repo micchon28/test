@@ -79,13 +79,14 @@
 					<a href='<s:url action="LogoutAction" />'>こちら</a></p>
 			</s:if>
 		</div>
-
-		<div id="footer">
-			<div id="pr">
-			</div>
-		</div>
-
 	</div>
+
+	<div id="footer">
+		<div id="pr">
+		</div>
+	</div>
+
+
 
 </body>
 </html>
