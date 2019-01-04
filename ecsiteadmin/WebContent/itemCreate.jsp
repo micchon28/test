@@ -87,16 +87,40 @@
 	</div>
 
 	<div>
+		<s:if test="newItemCreateErrorMessage != '' "> <!-- 入力エラーがありこのページに戻った場合にエラーメッセージを表示する。 -->
+			<s:property value="newItemCreateErrorMessage" escape="false" /> <!-- escape="false"は、newItemCreateErrorMessage内の文字列にエスケープシーケンスが含まれていた場合、エスケープせずにそのまま表示するという意味（<>タグなどもそのまま読み込む） -->
+		</s:if>
 
+		<table>
+			<s:form action="ItemCreateConfirmAction">
+			<tr>
+				<td>
+					<label>新規商品名:</label>
+				</td>
+				<td>
+					<input type="text" name="newItemName" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>新規商品単価:</label>
+				</td>
+				<td>
+					<input type="number" name="newItemPrice" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>新規商品在庫数:</label>
+				</td>
+				<td>
+					<input type="number" name="newItemStock" />
+				<td>
+					<s:submit value="登録" />
 
-		<s:form action="ItemCreateConfirmAction">
-			<s:textarea name="" />
-			<s:textarea name="" />
-			<s:textarea name="" />
-			<s:submit value="登録" />
-		</s:form>
+			</s:form>
 
-
+		</table>
 	</div>
 
 

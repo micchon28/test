@@ -4,7 +4,6 @@ import java.util.Map;
 import org.apache.struts2.interceptor.SessionAware;
 import com.opensymphony.xwork2.ActionSupport;
 
-
 public class UserCreateConfirmAction extends ActionSupport implements SessionAware{
 	private String loginUserId;
 	private String loginPassword;
@@ -24,7 +23,7 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 			session.put("userName", userName);
 		} else{
 			setErrorMessage("未入力の項目があります。");
-			result="ERROR";
+			result=ERROR;
 		}
 		return result;
 	}
