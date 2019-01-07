@@ -78,19 +78,28 @@
 		<p>商品リスト</p>
 	</div>
 
-	<!--
+	
 	<div>
 
-
-		<table>
+		<table border="1">
 			<tr>
-
-
+				<th>商品名</th>
+				<th>単価</th>
+				<th>在庫数</th>
+			</tr>
+			<tr>
+				<td><s:property value=""				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
 			</tr>
 
 		</table>
 	</div>
-	-->
+
 
 </div>
 
