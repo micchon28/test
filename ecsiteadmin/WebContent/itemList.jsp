@@ -10,7 +10,7 @@
 	<meta http-equiv="imagetoolbar" content="no" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-	<title>UserCreateComplete画面</title>
+	<title></title>
 
 	<style type="text/css">
 		body{
@@ -28,6 +28,8 @@
 			text-align:center;
 			margin:0 auto;
 		}
+
+
 		/* ecsite LAYOUT */
 		#top{
 			width:780px;
@@ -54,32 +56,48 @@
 			clear:both;
 		}
 
+		#box{
+			display:inline-block;
+			width:100px;
+			text-align:center;
+			margin:0 auto;
+			border:solid 1px black;
+		}
+
 	</style>
 </head>
 <body>
-	<div id="header">
-		<div id="pr">
-		</div>
+
+<div id="header">
+	<div id="pr">
+	</div>
+</div>
+
+<div id="main">
+	<div id="top">
+		<p>商品リスト</p>
 	</div>
 
-	<div id="main">
-		<div id="top">
-			<p>UserCreateComplete</p>
-		</div>
+	<!--
+	<div>
 
-		<div>
-			<h3>ユーザーの登録が完了致しました。</h3>
-			<div>
-				<a href='<s:url action="AdminAction" />'>管理者TOPへ</a>
-			</div>
-		</div>
 
+		<table>
+			<tr>
+
+
+			</tr>
+
+		</table>
 	</div>
+	-->
 
-	<div id="footer">
-		<div id="pr">
-		</div>
+</div>
+
+<div id="footer">
+	<div id="pr">
 	</div>
+</div>
 
 </body>
 </html>

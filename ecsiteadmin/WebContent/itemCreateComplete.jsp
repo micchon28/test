@@ -69,7 +69,8 @@
 
 		<div>
 
-		SUCCESS!!!
+		<h3>商品の登録が完了致しました。</h3>
+		<a href='<s:url action="AdminAction" />'>管理者TOPへ</a>
 
 		</div>
 	</div>

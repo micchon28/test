@@ -70,6 +70,7 @@
 		<div>
 			<s:form action="BuyItemAction">
 			<table>
+				<!-- <s:iterator value="itemList"> -->
 				<tr>
 					<td>
 						<span>商品名</span>
@@ -101,6 +102,8 @@
 						</select>
 					</td>
 				</tr>
+				<!-- </s:iterator> -->
+
 				<tr>
 					<td>
 						<span>支払い方法</span>
