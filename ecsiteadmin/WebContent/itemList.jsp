@@ -78,7 +78,7 @@
 		<p>商品リスト</p>
 	</div>
 
-	
+
 	<div>
 
 		<table border="1">
@@ -88,7 +88,7 @@
 				<th>在庫数</th>
 			</tr>
 			<tr>
-				<td><s:property value=""				</td>
+				<td><s:property value="id" /></td>
 				<td>
 				</td>
 				<td>
