@@ -10,7 +10,7 @@
 	<meta http-equiv="imagetoolbar" content="no" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-	<title>商品新規登録確認画面</title>
+	<title>ユーザーリスト</title>
 
 	<style type="text/css">
 		body{
@@ -28,6 +28,8 @@
 			text-align:center;
 			margin:0 auto;
 		}
+
+
 		/* ecsite LAYOUT */
 		#top{
 			width:780px;
@@ -54,61 +56,83 @@
 			clear:both;
 		}
 
+		#box{
+			display:inline-block;
+			width:100px;
+			text-align:center;
+			margin:0 auto;
+			border:solid 1px black;
+		}
+
+		#button-position{
+			margin:10px;
+		}
+
+		#delete-button{
+			display:block;
+			margin:0 auto;
+
+		}
+
 	</style>
 </head>
-
 <body>
-	<div id="header">
-		<div id="pr">
-		</div>
+
+<div id="header">
+	<div id="pr">
 	</div>
+</div>
 
-	<div id="main">
-		<div id="top">
-			<p>商品新規登録確認</p>
-		</div>
-
-		<div>
-			<table>
-				<s:form action="ItemCreateCompleteAction">
-				<tr>
-					<td>
-						<label>新規商品名:</label>
-					</td>
-					<td>
-						<s:property value="newItemName" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label>新規商品単価:</label>
-					</td>
-					<td>
-						<s:property value="newItemPrice" />円
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label>新規商品在庫数:</label>
-					</td>
-					<td>
-						<s:property value="newItemStock" />個
-					<td>
-						<s:submit value="完了" />
-
-				</s:form>
-
-			</table>
-
-		</div>
-	</div>
-
-	<div id="footer">
-		<div id="pr">
-		</div>
+<div id="main">
+	<div id="top">
+		<p>ユーザーリスト</p>
 	</div>
 
 
+	<div>
+
+		<table border="1">
+			<tr>
+				<th>登録番号</th>
+				<th>ログインID</th>
+				<th>ログインPASS</th>
+				<th>ユーザー名</th>
+				<th>登録日時</th>
+				<th>更新日時</th>
+			</tr>
+
+
+			<s:iterator value="#session.uiDTOListJSP">
+			<tr>
+				<td><s:property value="id" /></td>
+				<td><s:property value="loginId" /></td>
+				<td><s:property value="loginPass" /></td>
+				<td><s:property value="userName" /></td>
+				<td><s:property value="insertDate" /></td>
+				<td><s:property value="updateDate" /></td>
+			</tr>
+			</s:iterator>
+
+
+		</table>
+
+
+	</div>
+
+	<div id="button-position">
+		<s:action name="UserListDeleteConfirmAction">
+			<s:submit value="削除" id="delete-button" />
+		</s:action>
+	</div>
+
+
+
+</div>
+
+<div id="footer">
+	<div id="pr">
+	</div>
+</div>
 
 </body>
 </html>

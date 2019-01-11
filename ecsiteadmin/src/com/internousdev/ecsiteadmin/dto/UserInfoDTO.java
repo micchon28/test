@@ -1,10 +1,10 @@
 package com.internousdev.ecsiteadmin.dto;
 
-public class ItemInfoDTO {
+public class UserInfoDTO {
 	private String id;
-	private String itemName;
-	private String itemPrice;
-	private String itemStock;
+	private String loginId;
+	private String loginPass;
+	private String userName;
 	private String insertDate;
 	private String updateDate;
 
@@ -14,24 +14,23 @@ public class ItemInfoDTO {
 	public void setId(String id) {
 		this.id = id;
 	}
-
-	public String getItemName() {
-		return itemName;
+	public String getLoginId() {
+		return loginId;
 	}
-	public void setItemName(String itemName) {
-		this.itemName = itemName;
+	public void setLoginId(String loginId) {
+		this.loginId = loginId;
 	}
-	public String getItemPrice() {
-		return itemPrice;
+	public String getLoginPass() {
+		return loginPass;
 	}
-	public void setItemPrice(String itemPrice) {
-		this.itemPrice = itemPrice;
+	public void setLoginPass(String loginPass) {
+		this.loginPass = loginPass;
 	}
-	public String getItemStock() {
-		return itemStock;
+	public String getUserName() {
+		return userName;
 	}
-	public void setItemStock(String itemStock) {
-		this.itemStock = itemStock;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 	public String getInsertDate() {
 		return insertDate;

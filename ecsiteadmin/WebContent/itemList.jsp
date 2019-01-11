@@ -10,7 +10,7 @@
 	<meta http-equiv="imagetoolbar" content="no" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-	<title></title>
+	<title>商品リスト</title>
 
 	<style type="text/css">
 		body{
@@ -57,11 +57,21 @@
 		}
 
 		#box{
-			display:inline-block;
+			display:block;
 			width:100px;
 			text-align:center;
 			margin:0 auto;
 			border:solid 1px black;
+		}
+
+		#button-position{
+			margin:10px;
+		}
+
+		#delete-button{
+			display:block;
+			margin:0 auto;
+
 		}
 
 	</style>
@@ -83,21 +93,34 @@
 
 		<table border="1">
 			<tr>
+				<th>ID</th>
 				<th>商品名</th>
 				<th>単価</th>
 				<th>在庫数</th>
-			</tr>
-			<tr>
-				<td><s:property value="id" /></td>
-				<td>
-				</td>
-				<td>
-				</td>
-				<td>
-				</td>
+				<th>登録日時</th>
+				<th>更新日時</th>
 			</tr>
 
+
+			<s:iterator value="#session.iiDTOListJSP">
+			<tr>
+				<td><s:property value="id" /></td>
+				<td><s:property value="itemName" /></td>
+				<td><s:property value="itemPrice" /></td>
+				<td><s:property value="itemStock" /></td>
+				<td><s:property value="insertDate" /></td>
+				<td><s:property value="updateDate" /></td>
+			</tr>
+			</s:iterator>
+
+
 		</table>
+	</div>
+
+	<div id="button-position">
+		<s:action name="ItemListDeleteConfirmAction">
+			<s:submit value="削除" id="delete-button"/>
+		</s:action>
 	</div>
 
 

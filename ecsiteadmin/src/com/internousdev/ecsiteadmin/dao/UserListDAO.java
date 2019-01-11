@@ -8,21 +8,21 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.internousdev.ecsiteadmin.dto.ItemInfoDTO;
+import com.internousdev.ecsiteadmin.dto.UserInfoDTO;
 import com.internousdev.ecsiteadmin.util.DBConnector;
 
 
-public class ItemListDAO {
+public class UserListDAO {
 
-	List<ItemInfoDTO> iiDTOList=new ArrayList<ItemInfoDTO>();
+	List<UserInfoDTO> uiDTOList=new ArrayList<UserInfoDTO>();
 
-	public List<ItemInfoDTO> getItemInfo(){
+	public List<UserInfoDTO> getUserInfo(){
 		DBConnector db=new DBConnector(); //DBConnectorクラスをインスタンス化
 		Connection con=db.getConnection();
 		//Connectionクラスの変数conに、DBConnectorクラス内のgetConnection()メソッドの
 		//実行結果を格納する。データベースに接続できたかどうか。
 
-		String sql="SELECT * FROM item_info_transaction";
+		String sql="SELECT * FROM login_user_transaction";
 		//iitテーブルからすべての情報を選択（取得）する。
 
 		try{
@@ -30,21 +30,21 @@ public class ItemListDAO {
 			ResultSet rs=ps.executeQuery();
 
 			while(rs.next()){
-				ItemInfoDTO iiDTO=new ItemInfoDTO();
-				iiDTO.setId(rs.getString("id"));//rs.getString("テーブルの列=Columnの名前")
-				iiDTO.setItemName(rs.getString("item_name"));
-				iiDTO.setItemPrice(rs.getString("item_price"));
-				iiDTO.setItemStock(rs.getString("item_stock"));
-				iiDTO.setInsertDate(rs.getString("insert_date"));
-				iiDTO.setUpdateDate(rs.getString("update_date"));
-				iiDTOList.add(iiDTO);
+				UserInfoDTO uiDTO=new UserInfoDTO();
+				uiDTO.setId(rs.getString("id"));//rs.getString("テーブルの列=Columnの名前")
+				uiDTO.setLoginId(rs.getString("login_id"));
+				uiDTO.setLoginPass(rs.getString("login_pass"));
+				uiDTO.setUserName(rs.getString("user_name"));
+				uiDTO.setInsertDate(rs.getString("insert_date"));
+				uiDTO.setUpdateDate(rs.getString("update_date"));
+				uiDTOList.add(uiDTO);
 			}
 
 		} catch(SQLException e){
 			e.printStackTrace();
 		}
 
-		return iiDTOList;
+		return uiDTOList;
 
 	}
 

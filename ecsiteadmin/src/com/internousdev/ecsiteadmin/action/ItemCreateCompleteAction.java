@@ -19,9 +19,11 @@ public class ItemCreateCompleteAction extends ActionSupport implements SessionAw
 		String newItemNameFetch=session.get("newItemName").toString();
 		String newItemPriceFetchStr=session.get("newItemPrice").toString();
 		String newItemStockFetchStr=session.get("newItemStock").toString();
+		//新規商品単価・在庫数を一度文字列で受け取る。
 
 		int newItemPriceFetchInt=new Integer(newItemPriceFetchStr);
 		int newItemStockFetchInt=new Integer(newItemStockFetchStr);
+		//一度文字列で受け取った新規商品単価・在庫数を整数値に変える。
 
 		iccDAO.itemCreateInfo(newItemNameFetch, newItemPriceFetchInt, newItemStockFetchInt);
 
