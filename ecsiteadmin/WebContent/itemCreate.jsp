@@ -123,6 +123,7 @@
 		</table>
 	</div>
 
+	<a href="<s:url action='AdminAction' />">管理者TOPへ</a>
 
 </div>
 

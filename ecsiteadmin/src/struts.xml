@@ -57,6 +57,16 @@
 					<result name="success">itemList.jsp</result>
 				</action>
 
+				<!-- ItemListDeleteConfirmAction -->
+				<action name="ItemListDeleteConfirmAction" class="com.internousdev.ecsiteadmin.action.ItemListDeleteConfirmAction" method="execute">
+					<result name="success">itemListDeleteConfirm.jsp</result>
+				</action>
+
+				<!-- ItemListDeleteCompleteAction -->
+				<action name="ItemListDeleteCompleteAction" class="com.internousdev.ecsiteadmin.action.ItemListDeleteCompleteAction" method="execute">
+					<result name="success">itemListDeleteComplete.jsp</result>
+				</action>
+
 			<!-- ユーザー管理 -->
 
 				<!-- UserCreateAction -->
@@ -78,6 +88,16 @@
 				<!-- UserListAction -->
 				<action name="UserListAction" class="com.internousdev.ecsiteadmin.action.UserListAction" method="execute">
 					<result name="success">userList.jsp</result>
+				</action>
+
+				<!-- UserListDeleteConfirmAction -->
+				<action name="UserListDeleteConfirmAction" class="com.internousdev.ecsiteadmin.action.UserListDeleteConfirmAction" method="execute">
+					<result name="success">userListDeleteConfirm.jsp</result>
+				</action>
+
+				<!-- UserListDeleteCompleteAction -->
+				<action name="UserListDeleteCompleteAction" class="com.internousdev.ecsiteadmin.action.UserListDeleteCompleteAction" method="execute">
+					<result name="success">userListDeleteComplete.jsp</result>
 				</action>
 
 		<!-- LoginAction -->

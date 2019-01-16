@@ -1,16 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
 	<meta http-equiv="imagetoolbar" content="no" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!--  submitActionの実装用 -->
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-	<title>ユーザーリスト</title>
+	<title>ユーザー削除確認</title>
 
 	<style type="text/css">
 		body{
@@ -64,18 +65,24 @@
 			border:solid 1px black;
 		}
 
-		#button-position{
-			margin:10px;
+		#text-center{
+			display:inline-block;
+			text-align:center;
 		}
 
-		#delete-button{
-			display:block;
-			margin:0 auto;
 
-		}
 
 	</style>
+
+	<script type="text/javascript">
+		function submitAction(url){
+			$('form').attr('action', url);
+			$('form').submit();
+		}
+	</script>	<!--  submitActionの実装用 -->
+
 </head>
+
 <body>
 
 <div id="header">
@@ -85,48 +92,17 @@
 
 <div id="main">
 	<div id="top">
-		<p>ユーザーリスト</p>
+		<p>ユーザー削除確認</p>
 	</div>
-
 
 	<div>
-
-		<table border="1">
-			<tr>
-				<th>登録番号</th>
-				<th>ログインID</th>
-				<th>ログインPASS</th>
-				<th>ユーザー名</th>
-				<th>登録日時</th>
-				<th>更新日時</th>
-			</tr>
-
-
-			<s:iterator value="#session.uiDTOListJSP">
-			<tr>
-				<td><s:property value="id" /></td>
-				<td><s:property value="loginId" /></td>
-				<td><s:property value="loginPass" /></td>
-				<td><s:property value="userName" /></td>
-				<td><s:property value="insertDate" /></td>
-				<td><s:property value="updateDate" /></td>
-			</tr>
-			</s:iterator>
-
-
-		</table>
-
-
-	</div>
-
-	<div id="button-position">
-		<s:form action="UserListDeleteConfirmAction">
-			<s:submit value="削除" id="delete-button" />
+		すべてのユーザーを削除します。よろしいですか？<br>
+		<s:form>
+			<input type="button" value="ＯＫ" onclick="submitAction('UserListDeleteCompleteAction')" />
+			<input type="button" value="キャンセル" onclick="submitAction('UserListAction')" />
 		</s:form>
+
 	</div>
-
-
-	<a href="<s:url action='AdminAction' />">管理者TOPへ</a>
 
 
 </div>

@@ -10,7 +10,7 @@
 	<meta http-equiv="imagetoolbar" content="no" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-	<title></title>
+	<title>商品新規登録完了</title>
 
 	<style type="text/css">
 		body{
@@ -64,7 +64,7 @@
 
 	<div id="main">
 		<div id="top">
-			<p></p>
+			<p>商品新規登録完了</p>
 		</div>
 
 		<div>

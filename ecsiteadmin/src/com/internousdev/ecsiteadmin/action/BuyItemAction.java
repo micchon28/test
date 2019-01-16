@@ -5,7 +5,7 @@ import org.apache.struts2.interceptor.SessionAware;
 import java.util.Map;
 
 public class BuyItemAction extends ActionSupport implements SessionAware{
-	public Map<String, Object> session;
+	private Map<String, Object> session; //もともとはpublicだった
 	private int count;
 	private String pay;
 
@@ -25,6 +25,8 @@ public class BuyItemAction extends ActionSupport implements SessionAware{
 			payment="クレジットカード";
 			session.put("pay", payment);
 		}
+
+
 		return result;
 
 	}

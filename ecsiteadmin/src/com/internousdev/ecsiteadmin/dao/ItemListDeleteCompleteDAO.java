@@ -6,14 +6,9 @@ import java.sql.SQLException;
 
 import com.internousdev.ecsiteadmin.util.DBConnector;
 
-public class ItemListDeleteConfirmDAO {
-
+public class ItemListDeleteCompleteDAO {
 	private DBConnector db=new DBConnector();
 	private Connection con=db.getConnection();
-
-	//以下は、CompleteDAOにカット＆ペーストする。
-
-	/*
 
 	public void ItemListDelete(){
 		String sql="DELETE FROM item_info_transaction";
@@ -33,6 +28,6 @@ public class ItemListDeleteConfirmDAO {
 
 	}
 
-	*/
+
 
 }

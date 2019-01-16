@@ -118,10 +118,12 @@
 	</div>
 
 	<div id="button-position">
-		<s:action name="ItemListDeleteConfirmAction">
+		<s:form action="ItemListDeleteConfirmAction">
 			<s:submit value="削除" id="delete-button"/>
-		</s:action>
+		</s:form>
 	</div>
+
+	<a href="<s:url action='AdminAction' />">管理者TOPへ</a>
 
 
 </div>

@@ -15,12 +15,12 @@ import com.internousdev.ecsiteadmin.util.DBConnector;
 public class ItemListDAO {
 
 	List<ItemInfoDTO> iiDTOList=new ArrayList<ItemInfoDTO>();
+	private DBConnector db=new DBConnector(); //DBConnectorクラスをインスタンス化
+	private Connection con=db.getConnection();
+	//Connectionクラスの変数conに、DBConnectorクラス内のgetConnection()メソッドの
+	//実行結果を格納する。データベースに接続できたかどうか。
 
 	public List<ItemInfoDTO> getItemInfo(){
-		DBConnector db=new DBConnector(); //DBConnectorクラスをインスタンス化
-		Connection con=db.getConnection();
-		//Connectionクラスの変数conに、DBConnectorクラス内のgetConnection()メソッドの
-		//実行結果を格納する。データベースに接続できたかどうか。
 
 		String sql="SELECT * FROM item_info_transaction";
 		//iitテーブルからすべての情報を選択（取得）する。
@@ -47,6 +47,8 @@ public class ItemListDAO {
 		return iiDTOList;
 
 	}
+
+
 
 
 

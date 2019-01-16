@@ -111,6 +111,11 @@
 		</div>
 	</div>
 
+	<div>
+		<br>
+		<a href="<s:url action='GoHomeAction' />">Homeへ</a>
+	</div>
+
 </div>
 
 <div id="footer">
