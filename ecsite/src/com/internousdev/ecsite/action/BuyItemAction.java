@@ -31,11 +31,13 @@ public class BuyItemAction extends ActionSupport implements SessionAware{
 
 	public void setCount(int count){
 		this.count=count;
-	}
+	} //sessionで受け取ったbuyItem.jspのチェックボックスcountの値を
+	  //上記private int countへ格納する。（SessionAwareの働き？）
 
 	public void setPay(String pay){
 		this.pay=pay;
-	}
+	} //sessionで受け取ったbuyItem.jspのラジオボタンpayの値を
+	  //上記private String payへ格納する。（SessionAwareの働き？）
 
 	@Override
 	public void setSession(Map<String, Object> session){

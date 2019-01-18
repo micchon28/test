@@ -1,9 +1,7 @@
 package com.internousdev.ecsiteadmin.action;
 
 import java.util.Map;
-import java.util.List;
 import org.apache.struts2.interceptor.SessionAware;
-
 import com.internousdev.ecsiteadmin.dao.BuyItemDAO;
 import com.internousdev.ecsiteadmin.dao.LoginDAO;
 import com.internousdev.ecsiteadmin.dto.BuyItemDTO;
@@ -25,10 +23,12 @@ public class LoginAction extends ActionSupport implements SessionAware{
 
 		if(((LoginDTO) session.get("loginUser")).getLoginFlg()){
 			result=SUCCESS;
-			List<BuyItemDTO> buyItemDTOList=buyItemDAO.getBuyItemInfo();
+			BuyItemDTO buyItemDTO=buyItemDAO.getBuyItemInfo();
 
 			session.put("login_user_id", loginDTO.getLoginId());
-			session.put("buyItemDTOListJSP", buyItemDTOList);
+			session.put("id", buyItemDTO.getId());
+			session.put("buyItem_name", buyItemDTO.getItemName());
+			session.put("buyItem_price", buyItemDTO.getItemPrice());
 
 			return result;
 		}

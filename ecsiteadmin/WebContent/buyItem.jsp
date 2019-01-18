@@ -70,13 +70,12 @@
 		<div>
 			<s:form action="BuyItemAction">
 			<table>
-				<s:iterator value="#session.buyItemDTOListJSP">
 				<tr>
 					<td>
 						<span>商品名</span>
 					</td>
 					<td>
-						<s:property value="itemName" /><br>
+						<s:property value="session.buyItem_name" /><br>
 					</td>
 				</tr>
 
@@ -85,7 +84,7 @@
 						<span>値段</span>
 					</td>
 					<td>
-						<s:property value="itemPrice" /><span>円</span>
+						<s:property value="session.buyItem_price" /><span>円</span>
 					</td>
 				</tr>
 				<tr>
@@ -102,8 +101,6 @@
 						</select>
 					</td>
 				</tr>
-				</s:iterator>
-
 				<tr>
 					<td>
 						<span>支払い方法</span>
