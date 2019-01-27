@@ -75,14 +75,24 @@
 				<s:submit value="商品購入" />
 			</s:form>
 
+			<!--
+
 			<s:form action="AdminAction">
 				<s:submit value="管理者" />
 			</s:form>
 
-			<s:if test="#session.id != null">
+			-->
+
+			<s:if test="#session.id != null"> <!-- BuyItemのid?? -->
 				<p>ログアウトする場合は
 					<a href='<s:url action="LogoutAction" />'>こちら</a></p>
 			</s:if>
+
+			<s:if test="#session.is_admin == true "> <!-- LoginActionでセットした値 -->
+				<p>(管理者用)ログアウトする場合は
+					<a href='<s:url action="LogoutAction" />'>こちら</a></p>
+			</s:if>
+
 		</div>
 	</div>
 

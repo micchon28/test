@@ -35,6 +35,7 @@ public class UserListDAO {
 				uiDTO.setLoginId(rs.getString("login_id"));
 				uiDTO.setLoginPass(rs.getString("login_pass"));
 				uiDTO.setUserName(rs.getString("user_name"));
+				uiDTO.setAdminFlg(rs.getString("admin_flg"));
 				uiDTO.setInsertDate(rs.getString("insert_date"));
 				uiDTO.setUpdateDate(rs.getString("update_date"));
 				uiDTOList.add(uiDTO);

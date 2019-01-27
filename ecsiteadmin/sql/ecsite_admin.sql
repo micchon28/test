@@ -12,6 +12,7 @@ create table login_user_transaction(
 	login_id varchar(16) unique,
 	login_pass varchar(16),
 	user_name varchar(50),
+	admin_flg varchar(1),
 	insert_date datetime,
 	update_date datetime
 );
@@ -41,4 +42,6 @@ create table user_buy_item_transaction(
 );
 
 INSERT INTO item_info_transaction(item_name, item_price, item_stock) VALUES("ノートBOOK", 100, 50);
-INSERT INTO login_user_transaction(login_id, login_pass, user_name) VALUES("internous", "internous01", "test");
+
+ALTER TABLE login_user_transaction ALTER COLUMN admin_flg SET DEFAULT "0";
+INSERT INTO login_user_transaction(login_id, login_pass, user_name, admin_flg) VALUES("internous_admin", "internous_admin1", "admin", "1"), ("internous", "internous01", "test", "0");

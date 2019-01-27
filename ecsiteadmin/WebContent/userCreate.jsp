@@ -102,6 +102,15 @@
 					<input type="text" name="userName" value="" />
 				</td>
 			</tr>
+			<tr>
+				<td>
+					<label>管理者フラグ:</label>
+				</td>
+				<td>
+					<input type="radio" name="adminFlg" value="0" checked/>0（一般ユーザー）
+					<input type="radio" name="adminFlg" value="1" />1（管理者）
+				</td>
+			</tr>
 
 			<s:submit value="登録" />
 

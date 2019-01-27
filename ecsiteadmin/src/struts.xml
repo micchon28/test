@@ -16,6 +16,7 @@
 		<action name="HomeAction" class="com.internousdev.ecsiteadmin.action.HomeAction" method="execute">
 			<result name="login">login.jsp</result>
 			<result name="success">buyItem.jsp</result>
+			<result name="success_admin_home">admin.jsp</result>
 		</action>
 
 		<!-- MyPageAction -->
@@ -100,11 +101,32 @@
 					<result name="success">userListDeleteComplete.jsp</result>
 				</action>
 
+				<!-- UserListGeneralDeleteConfirmAction -->
+				<action name="UserListGeneralDeleteConfirmAction" class="com.internousdev.ecsiteadmin.action.UserListGeneralDeleteConfirmAction" method="execute">
+					<result name="success">userListGeneralDeleteConfirm.jsp</result>
+				</action>
+
+				<!-- UserListDeleteCompleteAction -->
+				<action name="UserListGeneralDeleteCompleteAction" class="com.internousdev.ecsiteadmin.action.UserListGeneralDeleteCompleteAction" method="execute">
+					<result name="success">userListGeneralDeleteComplete.jsp</result>
+				</action>
+
+
 		<!-- LoginAction -->
 		<action name="LoginAction" class="com.internousdev.ecsiteadmin.action.LoginAction" method="execute">
 			<result name="success">buyItem.jsp</result>
+			<result name="success_admin_login">admin.jsp</result>
 			<result name="error">login.jsp</result>
 		</action>
+
+		<!-- LoginAction_backup
+
+		<action name="LoginAction_backup" class="com.internousdev.ecsiteadmin.action.LoginAction_backup" method="execute">
+			<result name="success">buyItem.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+
+		-->
 
 		<!-- BuyItemAction -->
 		<action name="BuyItemAction" class="com.internousdev.ecsiteadmin.action.BuyItemAction" method="execute">

@@ -70,7 +70,6 @@
 		<div>
 			<h3>ユーザーの登録が完了致しました。</h3>
 			<div>
-				<a href='<s:url action="LoginAction" />'>ログイン画面へ</a><br>
 				<a href='<s:url action="AdminAction" />'>管理者TOPへ</a><br>
 
 			</div>

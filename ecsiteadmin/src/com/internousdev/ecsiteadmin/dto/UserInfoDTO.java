@@ -5,6 +5,7 @@ public class UserInfoDTO {
 	private String loginId;
 	private String loginPass;
 	private String userName;
+	private String adminFlg;
 	private String insertDate;
 	private String updateDate;
 
@@ -31,6 +32,12 @@ public class UserInfoDTO {
 	}
 	public void setUserName(String userName) {
 		this.userName = userName;
+	}
+	public String getAdminFlg() {
+		return adminFlg;
+	}
+	public void setAdminFlg(String adminFlg) {
+		this.adminFlg = adminFlg;
 	}
 	public String getInsertDate() {
 		return insertDate;

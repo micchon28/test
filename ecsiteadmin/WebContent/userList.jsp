@@ -97,6 +97,7 @@
 				<th>ログインID</th>
 				<th>ログインPASS</th>
 				<th>ユーザー名</th>
+				<th>管理者フラグ</th>
 				<th>登録日時</th>
 				<th>更新日時</th>
 			</tr>
@@ -108,6 +109,7 @@
 				<td><s:property value="loginId" /></td>
 				<td><s:property value="loginPass" /></td>
 				<td><s:property value="userName" /></td>
+				<td><s:property value="adminFlg" /></td>
 				<td><s:property value="insertDate" /></td>
 				<td><s:property value="updateDate" /></td>
 			</tr>
@@ -120,8 +122,11 @@
 	</div>
 
 	<div id="button-position">
+		<s:form action="UserListGeneralDeleteConfirmAction">
+			<s:submit value="削除（一般ユーザーのみ）" id="delete-button" />
+		</s:form>
 		<s:form action="UserListDeleteConfirmAction">
-			<s:submit value="削除" id="delete-button" />
+			<s:submit value="削除（全件）" id="delete-button" />
 		</s:form>
 	</div>
 

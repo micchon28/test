@@ -13,15 +13,16 @@ public class UserCreateCompleteDAO {
 	private Connection connection=dbConnector.getConnection();
 	private DateUtil dateUtil=new DateUtil();
 
-	private String sql="INSERT INTO login_user_transaction(login_id, login_pass, user_name, insert_date) VALUES(?, ?, ?, ?)";
+	private String sql="INSERT INTO login_user_transaction(login_id, login_pass, user_name, admin_flg, insert_date) VALUES(?, ?, ?, ?, ?)";
 
-	public void createUser(String loginUserId, String loginPassword, String userName) throws SQLException{
+	public void createUser(String loginUserId, String loginPassword, String userName, String adminFlg) throws SQLException{
 		try{
 			PreparedStatement preparedStatement=connection.prepareStatement(sql);
 			preparedStatement.setString(1, loginUserId);
 			preparedStatement.setString(2, loginPassword);
 			preparedStatement.setString(3, userName);
-			preparedStatement.setString(4, dateUtil.getDate());
+			preparedStatement.setString(4, adminFlg);
+			preparedStatement.setString(5, dateUtil.getDate());
 
 			preparedStatement.execute();
 		} catch(Exception e){

@@ -1,6 +1,6 @@
 package com.internousdev.ecsiteadmin.dto;
 
-public class LoginDTO {
+public class LoginDTO_backup {
 	private String loginId;
 	private String loginPassword;
 	private String userName;

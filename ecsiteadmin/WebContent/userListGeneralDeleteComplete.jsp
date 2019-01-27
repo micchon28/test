@@ -10,7 +10,7 @@
 	<meta http-equiv="imagetoolbar" content="no" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-	<title>全ユーザー削除完了</title>
+	<title>一般ユーザー削除完了</title>
 
 	<style type="text/css">
 		body{
@@ -83,11 +83,11 @@
 
 <div id="main">
 	<div id="top">
-		<p>全ユーザー削除完了</p>
+		<p>一般ユーザー削除完了</p>
 	</div>
 
 	<div>
-		すべてのユーザー（管理者含む）の削除が完了しました。<br>
+		一般ユーザーの削除が完了しました。<br>
 		<a href='<s:url action="AdminAction" />' >管理者TOPへ</a>
 
 	</div>

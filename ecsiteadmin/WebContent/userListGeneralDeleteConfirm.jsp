@@ -8,9 +8,10 @@
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
 	<meta http-equiv="imagetoolbar" content="no" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!--  submitActionの実装用 -->
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-	<title>全ユーザー削除完了</title>
+	<title>一般ユーザー削除確認</title>
 
 	<style type="text/css">
 		body{
@@ -72,6 +73,14 @@
 
 
 	</style>
+
+	<script type="text/javascript">
+		function submitAction(url){
+			$('form').attr('action', url);
+			$('form').submit();
+		}
+	</script>	<!--  submitActionの実装用 -->
+
 </head>
 
 <body>
@@ -83,12 +92,15 @@
 
 <div id="main">
 	<div id="top">
-		<p>全ユーザー削除完了</p>
+		<p>一般ユーザー削除確認</p>
 	</div>
 
 	<div>
-		すべてのユーザー（管理者含む）の削除が完了しました。<br>
-		<a href='<s:url action="AdminAction" />' >管理者TOPへ</a>
+		すべての一般ユーザーを削除します。よろしいですか？<br>
+		<s:form>
+			<input type="button" value="ＯＫ" onclick="submitAction('UserListGeneralDeleteCompleteAction')" />
+			<input type="button" value="キャンセル" onclick="submitAction('UserListAction')" />
+		</s:form>
 
 	</div>
 

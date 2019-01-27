@@ -18,6 +18,11 @@ public class HomeAction extends ActionSupport implements SessionAware{
 			session.put("buyItem_name", buyItemDTO.getItemName());
 			session.put("buyItem_price", buyItemDTO.getItemPrice());
 			result=SUCCESS;
+		} else if(((Boolean) session.get("is_admin"))==null){
+			session.put("is_admin", false);
+
+		} else if(((Boolean) session.get("is_admin"))==true){
+			result="success_admin_home";
 		}
 		return result;
 	}

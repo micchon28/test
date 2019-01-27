@@ -11,7 +11,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!--  submitActionの実装用 -->
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-	<title>ユーザー削除確認</title>
+	<title>全ユーザー削除確認</title>
 
 	<style type="text/css">
 		body{
@@ -92,11 +92,11 @@
 
 <div id="main">
 	<div id="top">
-		<p>ユーザー削除確認</p>
+		<p>全ユーザー削除確認</p>
 	</div>
 
 	<div>
-		すべてのユーザーを削除します。よろしいですか？<br>
+		すべてのユーザー（管理者含む）を削除します。よろしいですか？<br>
 		<s:form>
 			<input type="button" value="ＯＫ" onclick="submitAction('UserListDeleteCompleteAction')" />
 			<input type="button" value="キャンセル" onclick="submitAction('UserListAction')" />

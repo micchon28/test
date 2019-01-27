@@ -94,6 +94,14 @@
 						<s:property value="userName" escape="false" />
 					</td>
 				</tr>
+				<tr id="box">
+					<td>
+						<label>管理者フラグ:</label>
+					</td>
+					<td>
+						<s:property value="adminFlg" escape="false" />
+					</td>
+				</tr>
 				<tr>
 					<td>
 						<s:submit value="完了" />
